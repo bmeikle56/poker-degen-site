@@ -122,7 +122,7 @@ function FeedbackForm() {
 
 function Support() {
   return (
-    <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
+    <div style={{width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
       <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -149,14 +149,14 @@ function Support() {
 
 function Privacy() {
   return (
-    <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
-      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
+    <div style={{width: '100vw', height: '100vh'}}>
+      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column'}}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.0, duration: 2.0 }}
       >
-        <div style={{color: 'rgb(0,255,255)', width: '50vw', height: '30vh'}}>
-            <ReactMarkdown>{privacyMarkdown}</ReactMarkdown>
+        <div className='privacy-txt'>
+          <ReactMarkdown>{privacyMarkdown}</ReactMarkdown>
         </div>
       </motion.div>
     </div>
