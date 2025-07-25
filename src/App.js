@@ -106,11 +106,11 @@ function App() {
           <Diamond/>
           <PokerDegenTitle/>
         </div>
-        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', marginTop: -10, marginLeft: 80}}>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', marginTop: -30, marginLeft: 80}}>
           <PokerDegenSubtitle/>
         </div>
       </motion.div>
-      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', width: '100vw', marginTop: -100}}
+      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', width: '100vw', marginTop: -120}}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.0, duration: 2.0 }}
