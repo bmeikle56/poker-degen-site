@@ -121,33 +121,6 @@ function FeedbackForm() {
   );
 }
 
-function Home() {
-  return (
-    <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
-      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.0, duration: 2.0 }}
-      >
-        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', gap: 30}}>
-          <Diamond/>
-          <PokerDegenTitle/>
-        </div>
-        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', marginTop: -30, marginLeft: 80}}>
-          <PokerDegenSubtitle/>
-        </div>
-      </motion.div>
-      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', width: '100vw', marginTop: -120}}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.0, duration: 2.0 }}
-      >
-        <FeedbackForm/>
-      </motion.div>
-    </div>
-  )
-}
-
 function Support() {
   return (
     <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
@@ -195,7 +168,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>} />
         <Route path="/support" element={<Support/>} />
         <Route path="/privacy" element={<Privacy/>} />
       </Routes>
