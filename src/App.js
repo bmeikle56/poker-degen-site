@@ -1,4 +1,7 @@
 import './App.css'
+import { motion } from "framer-motion"
+import React, { useState } from 'react';
+
 
 function PokerDegenTitle() {
   return (
@@ -9,6 +12,18 @@ function PokerDegenTitle() {
     }}>
       PokerDegen
     </h1>
+  )
+}
+
+function PokerDegenSubtitle() {
+  return (
+    <p style={{
+      color: 'rgb(0,255,255)',
+      fontSize: '18pt',
+      textShadow: '0 0 6px white'
+    }}>
+      A fast poker solver
+    </p>
   )
 }
 
@@ -29,14 +44,80 @@ function Diamond() {
   )
 }
 
+function FeedbackForm() {
+  const [text, setText] = useState('');
+  const mailtoLink = `mailto:braedenmeikle@gmail.com?subject=PokerDegen Feedback&body=${encodeURIComponent(text || '')}`;
+  const textareaStyle = {
+    width: '30vw',
+    height: '20vh',
+    padding: 16,
+    fontSize: 18,
+    outline: 'none',
+    border: '2px solid rgb(0,255,255)',
+    borderRadius: 8,
+    backgroundColor: 'black',
+    boxShadow: '0 0 8px 2px rgba(255,255,255,0.4)',
+    resize: 'none',
+    fontFamily: 'sans-serif',
+    cursor: 'text',
+    color: 'gray',
+  };
+
+  const buttonStyle = {
+    backgroundColor: 'rgb(0,255,255)',
+    border: 'none',
+    borderRadius: 6,
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 20,
+    padding: '12px 48px',
+    cursor: 'pointer',
+    boxShadow: '0 0 6px rgba(0,255,255,0.7)',
+    userSelect: 'none',
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
+      <textarea
+        value={text}
+        onChange={e => setText(e.target.value)}
+        placeholder="Questions or comments for the dev!"
+        spellCheck={false}
+        style={textareaStyle}
+      />
+      <a href={mailtoLink}>
+        <button style={buttonStyle}>
+          Send
+        </button>
+      </a>
+    </div>
+  );
+}
+
 function App() {
   return (
-    <body style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
-      <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '100vh', gap: 30}}>
-        <Diamond/>
-        <PokerDegenTitle/>
-      </div>
-    </body>
+    <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
+      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1.0, duration: 2.0 }}
+      >
+        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', gap: 30}}>
+          <Diamond/>
+          <PokerDegenTitle/>
+        </div>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', marginTop: -10, marginLeft: 80}}>
+          <PokerDegenSubtitle/>
+        </div>
+      </motion.div>
+      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', width: '100vw', marginTop: -100}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1.0, duration: 2.0 }}
+      >
+        <FeedbackForm/>
+      </motion.div>
+    </div>
   )
 }
 
