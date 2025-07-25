@@ -48,8 +48,8 @@ function FeedbackForm() {
   const [text, setText] = useState('');
   const mailtoLink = `mailto:braedenmeikle@gmail.com?subject=PokerDegen Feedback&body=${encodeURIComponent(text || '')}`;
   const textareaStyle = {
-    width: 600,
-    height: 200,
+    width: '30vw',
+    height: '20vh',
     padding: 16,
     fontSize: 18,
     outline: 'none',
@@ -110,9 +110,13 @@ function App() {
           <PokerDegenSubtitle/>
         </div>
       </motion.div>
-      <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', width: '100vw', marginTop: -100}}>
+      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', width: '100vw', marginTop: -100}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1.0, duration: 2.0 }}
+      >
         <FeedbackForm/>
-      </div>
+      </motion.div>
     </div>
   )
 }
