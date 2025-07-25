@@ -1,4 +1,5 @@
 import './App.css'
+import { motion } from "framer-motion"
 
 function PokerDegenTitle() {
   return (
@@ -9,6 +10,18 @@ function PokerDegenTitle() {
     }}>
       PokerDegen
     </h1>
+  )
+}
+
+function PokerDegenSubtitle() {
+  return (
+    <p style={{
+      color: 'rgb(0,255,255)',
+      fontSize: '18pt',
+      textShadow: '0 0 6px white'
+    }}>
+      A fast poker solver
+    </p>
   )
 }
 
@@ -32,10 +45,19 @@ function Diamond() {
 function App() {
   return (
     <body style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
-      <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '100vh', gap: 30}}>
-        <Diamond/>
-        <PokerDegenTitle/>
-      </div>
+      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '100vh', gap: 0, flexDirection: 'column'}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1.0, duration: 2.0 }}
+      >
+        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', gap: 30}}>
+          <Diamond/>
+          <PokerDegenTitle/>
+        </div>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', marginTop: -10, marginLeft: 80}}>
+          <PokerDegenSubtitle/>
+        </div>
+      </motion.div>
     </body>
   )
 }
