@@ -32,9 +32,8 @@ For questions, email us at braedenmeikle@gmail.com.
 
 function PokerDegenTitle() {
   return (
-    <h1 style={{
+    <h1 className="title" style={{
       color: 'rgb(0,255,255)',
-      fontSize: '40pt',
       textShadow: '0 0 6px white'
     }}>
       PokerDegen
@@ -44,9 +43,8 @@ function PokerDegenTitle() {
 
 function PokerDegenSubtitle() {
   return (
-    <p style={{
+    <p className='subtitle' style={{
       color: 'rgb(0,255,255)',
-      fontSize: '18pt',
       textShadow: '0 0 6px white'
     }}>
       A fast poker solver
@@ -56,7 +54,7 @@ function PokerDegenSubtitle() {
 
 function Diamond() {
   return (
-    <svg width="60" height="100" viewBox="0 0 60 100">
+    <svg className="diamond-icon" width="60" height="100" viewBox="0 0 60 100">
       <defs>
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
           <feDropShadow dx="0" dy="0" stdDeviation="4" floodColor="white" />
@@ -75,10 +73,11 @@ function FeedbackForm() {
   const [text, setText] = useState('');
   const mailtoLink = `mailto:braedenmeikle@gmail.com?subject=PokerDegen Feedback&body=${encodeURIComponent(text || '')}`;
   const textareaStyle = {
-    width: '30vw',
+    width: '58vw',
     height: '20vh',
+    maxWidth: '400px',
+    maxHeight: '150px',
     padding: 16,
-    fontSize: 18,
     outline: 'none',
     border: '2px solid rgb(0,255,255)',
     borderRadius: 8,
@@ -96,7 +95,6 @@ function FeedbackForm() {
     borderRadius: 6,
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 20,
     padding: '12px 48px',
     cursor: 'pointer',
     boxShadow: '0 0 6px rgba(0,255,255,0.7)',
@@ -106,6 +104,7 @@ function FeedbackForm() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
       <textarea
+        className='feedback-box'
         value={text}
         onChange={e => setText(e.target.value)}
         placeholder="Questions or comments for the dev!"
@@ -113,7 +112,7 @@ function FeedbackForm() {
         style={textareaStyle}
       />
       <a href={mailtoLink}>
-        <button style={buttonStyle}>
+        <button className='send-btn' style={buttonStyle}>
           Send
         </button>
       </a>
@@ -123,13 +122,13 @@ function FeedbackForm() {
 
 function Support() {
   return (
-    <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
+    <div style={{width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
       <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.0, duration: 2.0 }}
       >
-        <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', gap: 30}}>
+        <div className="title-view" style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
           <Diamond/>
           <PokerDegenTitle/>
         </div>
@@ -150,14 +149,14 @@ function Support() {
 
 function Privacy() {
   return (
-    <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
-      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
+    <div style={{width: '100vw', height: '100vh'}}>
+      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column'}}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.0, duration: 2.0 }}
       >
-        <div style={{color: 'rgb(0,255,255)', width: '50vw', height: '30vh'}}>
-            <ReactMarkdown>{privacyMarkdown}</ReactMarkdown>
+        <div className='privacy-txt'>
+          <ReactMarkdown>{privacyMarkdown}</ReactMarkdown>
         </div>
       </motion.div>
     </div>
