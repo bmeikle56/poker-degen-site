@@ -1,7 +1,34 @@
 import './App.css'
 import { motion } from "framer-motion"
-import React, { useState } from 'react';
+import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
 
+const privacyMarkdown = `
+## Privacy Policy
+
+We value your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights.
+
+### Information We Collect
+- Personal information like your name and email address.
+- Usage data such as how you use the app.
+
+### How We Use Your Information
+- To provide and improve our services.
+- To communicate with you.
+
+### Data Sharing
+We do not sell your data. We may share data with trusted service providers to help operate the app.
+
+### Your Rights
+You can request access to or deletion of your personal data by contacting us at braedenmeikle@gmail.com.
+
+### Changes to This Policy
+We may update this policy occasionally. We will notify you of significant changes.
+
+### Contact Us
+For questions, email us at braedenmeikle@gmail.com.
+`
 
 function PokerDegenTitle() {
   return (
@@ -94,7 +121,7 @@ function FeedbackForm() {
   );
 }
 
-function App() {
+function Support() {
   return (
     <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
       <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
@@ -118,6 +145,33 @@ function App() {
         <FeedbackForm/>
       </motion.div>
     </div>
+  )
+}
+
+function Privacy() {
+  return (
+    <div style={{background: 'black', width: '100vw', height: '100vh', margin: 0, padding: 0, overflow: 'hidden'}}>
+      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1.0, duration: 2.0 }}
+      >
+        <div style={{color: 'rgb(0,255,255)', width: '50vw', height: '30vh'}}>
+            <ReactMarkdown>{privacyMarkdown}</ReactMarkdown>
+        </div>
+      </motion.div>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/support" element={<Support/>} />
+        <Route path="/privacy" element={<Privacy/>} />
+      </Routes>
+    </Router>
   )
 }
 
