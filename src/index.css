@@ -29,6 +29,14 @@ code {
   gap: 30px;
 }
 
+.feedback-box {
+  font-size: 14pt;
+}
+
+.send-btn {
+  font-size: 16pt;
+}
+
 @media (max-width: 600px) {
   .diamond-icon {
     width: 30px;
@@ -47,5 +55,15 @@ code {
     margin-right: 40px;
     margin-top: 20px;
     font-size: 12pt;
+  }
+
+  .feedback-box {
+    font-size: 11pt;
+    /* margin-bottom: 30px; */
+  }
+
+  .send-btn {
+    font-size: 11pt;
+    margin-bottom: 60px;
   }
 }

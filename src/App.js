@@ -75,10 +75,9 @@ function FeedbackForm() {
   const textareaStyle = {
     width: '58vw',
     height: '20vh',
-    maxWidth: '350px',
+    maxWidth: '400px',
     maxHeight: '150px',
     padding: 16,
-    fontSize: 18,
     outline: 'none',
     border: '2px solid rgb(0,255,255)',
     borderRadius: 8,
@@ -96,7 +95,6 @@ function FeedbackForm() {
     borderRadius: 6,
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 20,
     padding: '12px 48px',
     cursor: 'pointer',
     boxShadow: '0 0 6px rgba(0,255,255,0.7)',
@@ -106,6 +104,7 @@ function FeedbackForm() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
       <textarea
+        className='feedback-box'
         value={text}
         onChange={e => setText(e.target.value)}
         placeholder="Questions or comments for the dev!"
@@ -113,7 +112,7 @@ function FeedbackForm() {
         style={textareaStyle}
       />
       <a href={mailtoLink}>
-        <button style={buttonStyle}>
+        <button className='send-btn' style={buttonStyle}>
           Send
         </button>
       </a>
