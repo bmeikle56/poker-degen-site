@@ -1,4 +1,3 @@
-import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Home from './page/home'
@@ -20,9 +19,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/support" element={<Support/>} />
-        <Route path="/privacy" element={<Privacy/>} />
+        <Route path='/' element={<Home/>} />
+        <Route path='/support' element={<Support/>} />
+        <Route path='/privacy' element={<Privacy/>} />
       </Routes>
     </Router>
   )

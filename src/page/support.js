@@ -1,4 +1,7 @@
-
+import { motion } from 'framer-motion'
+import Diamond from '../cmp/Diamond'
+import PokerDegenTitle from '../cmp/Title'
+import FeedbackForm from '../cmp/FeedbackForm'
 
 function Support() {
   return (
@@ -8,7 +11,7 @@ function Support() {
       animate={{ opacity: 1 }}
       transition={{ delay: 1.0, duration: 2.0 }}
       >
-        <div className="title-view" style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
+        <div className='title-view' style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
           <Diamond/>
           <PokerDegenTitle/>
         </div>

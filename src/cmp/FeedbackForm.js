@@ -1,4 +1,4 @@
-
+import { useState } from 'react'
 
 function FeedbackForm() {
   const [text, setText] = useState('')
@@ -38,7 +38,7 @@ function FeedbackForm() {
         className='feedback-box'
         value={text}
         onChange={e => setText(e.target.value)}
-        placeholder="Questions or comments for the dev!"
+        placeholder='Questions or comments for the dev!'
         spellCheck={false}
         style={textareaStyle}
       />
