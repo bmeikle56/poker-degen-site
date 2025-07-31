@@ -1,5 +1,3 @@
-
-
 function Diamond() {
   return (
     <svg className='diamond-icon' width='60' height='100' viewBox='0 0 60 100'>

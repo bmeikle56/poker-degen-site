@@ -9,7 +9,7 @@ function Support() {
       <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', gap: 0, flexDirection: 'column'}}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.0, duration: 2.0 }}
+      transition={{ delay: 0.6, duration: 2.0 }}
       >
         <div className='title-view' style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
           <Diamond/>
@@ -19,7 +19,7 @@ function Support() {
       <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height: '50vh', width: '100vw', marginTop: -120}}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.0, duration: 2.0 }}
+      transition={{ delay: 0.6, duration: 2.0 }}
       >
         <FeedbackForm/>
       </motion.div>

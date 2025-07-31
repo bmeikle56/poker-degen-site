@@ -1,5 +1,3 @@
-
-
 function PokerDegenTitle() {
   return (
     <h1 className='title' style={{

@@ -33,7 +33,7 @@ function Privacy() {
       <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column'}}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.0, duration: 2.0 }}
+      transition={{ delay: 0.6, duration: 2.0 }}
       >
         <div className='privacy-txt'>
           <ReactMarkdown>{privacyMarkdown}</ReactMarkdown>
