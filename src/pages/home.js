@@ -8,7 +8,7 @@ function Home() {
     <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '100vw', height: '100vh'}}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    transition={{ delay: 0.2, duration: 2.0 }}
+    transition={{ delay: 1.2, duration: 2.0 }}
     >
       <div className='title-view' style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
         <Diamond/>
