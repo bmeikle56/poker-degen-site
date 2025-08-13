@@ -8,7 +8,7 @@ function Video({ device }) {
       muted 
       loop 
       playsInline 
-      style={{ width: '15%' }}
+      className='video'
     />
   )
 }

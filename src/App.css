@@ -19,24 +19,33 @@ code {
 }
 
 .title {
-  font-size: 30pt;
+  font-size: 28pt;
 }
 
 .title-view {
-  gap: 30px;
+  gap: 20px;
+}
+
+.video {
+  width: 30%;
+  max-width: 200px;
 }
 
 @media (max-width: 600px) {
   .diamond-icon {
-    width: 15px;
-    height: 25px;
+    width: 24px;
+    height: 40px;
   }
 
   .title {
-    font-size: 15px;
+    font-size: 24px;
   }
 
   .title-view {
     gap: 15px;
+  }
+
+  .video {
+    width: 50%;
   }
 }
