@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import Diamond from '../cmp/Diamond'
 import PokerDegenTitle from '../cmp/Title'
-import RouteButton from '../cmp/RouteButton'
 
 function Home() {
   return (
@@ -14,9 +13,7 @@ function Home() {
         <Diamond/>
         <PokerDegenTitle/>
       </div>
-      <RouteButton txt={'Support'} path={'/support'}/>
       <div style={{height: 20}}/>
-      <RouteButton txt={'Privacy'} path={'/privacy'}/>
     </motion.div>
   )
 }
