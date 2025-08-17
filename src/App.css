@@ -18,6 +18,11 @@ code {
   height: 50px;
 }
 
+a, a:visited, a:hover, a:active {
+  color: rgb(0, 255, 255);
+  text-decoration: underline;
+}
+
 .title {
   font-size: 28pt;
 }
