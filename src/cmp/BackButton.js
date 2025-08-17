@@ -10,7 +10,6 @@ function BackButton() {
       gap: 8,
       alignItems: 'center',
       height: '4vh',
-      background: 'blue',
       color: 'rgb(0,255,255)',
       fontSize: 12,
       background: 'black',
