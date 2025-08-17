@@ -41,16 +41,19 @@ function Download() {
       animate={{ opacity: 1 }}
       transition={{ delay: 1.2, duration: 2.0 }}
       >
-        <div style={{display: 'flex', justifyContent: 'flex-start', flexDirection: 'column'}}>
+        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
+          <div style={{display: 'flex', justifyContent: 'center', paddingBottom: 30}}>
+            <pre style={{color: 'rgb(0,255,255)', textShadow: '0px 0px 5px white, 0px 0px 5px white'}}>{'{ requires a MacBook }'}</pre>
+          </div>
           <div style={{display: 'flex', gap: 20}}>
             <Bullet i={'1'}/>
-            <a href="https://apps.apple.com/app/xcode/id497799835?mt=12" target="_blank" rel="noopener noreferrer">
+            <a href='https://apps.apple.com/app/xcode/id497799835?mt=12' target='_blank' rel='noopener noreferrer'>
               <pre style={{color: 'rgb(0,255,255)'}}>download Xcode</pre>
             </a>
           </div>
           <div style={{display: 'flex', gap: 20}}>
             <Bullet i={'2'}/>
-            <a href="/files/PokerDegen.zip" target="_blank" rel="noopener noreferrer">
+            <a href='/files/PokerDegen.zip'>
               <pre style={{color: 'rgb(0,255,255)'}}>download PokerDegen zip</pre>
             </a>
           </div>
@@ -59,15 +62,10 @@ function Download() {
             <pre style={{color: 'rgb(0,255,255)'}}>run the app on your iPhone</pre>
           </div>
           <div style={{display: 'flex', gap: 20}}>
-            <Bullet i={'3'}/>
+            <Bullet i={'4'}/>
             <pre style={{color: 'rgb(0,255,255)'}}>analyze hands!</pre>
           </div>
         </div>
-        
-
-          
-
-        
       </motion.div>
     )
   }
