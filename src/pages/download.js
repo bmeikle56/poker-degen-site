@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Loading from '../cmp/Loading'
+import BackButton from '../cmp/BackButton'
 
 function Bullet({ i }) {
 
@@ -36,14 +37,33 @@ function Download() {
     return <Loading setLoading={setLoading}/>
   } else {
     return (
-      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '100vw', height: '100vh'}}
+      <motion.div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100vw',
+        height: '100vh',
+        position: 'relative'
+      }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.2, duration: 2.0 }}
+    >
+      <div style={{ position: 'absolute', top: 20, left: 20 }}>
+        <BackButton />
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          width: '350px',
+        }}
       >
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
           <div style={{display: 'flex', justifyContent: 'center', paddingBottom: 30}}>
-            <pre style={{color: 'rgb(0,255,255)', textShadow: '0px 0px 5px white, 0px 0px 5px white'}}>{'{ requires a MacBook }'}</pre>
+            <pre style={{color: 'rgb(0,255,255)', textShadow: '0px 0px 7px white, 0px 0px 7px white'}}>{'{ requires a MacBook }'}</pre>
           </div>
           <div style={{display: 'flex', gap: 20}}>
             <Bullet i={'1'}/>
@@ -59,18 +79,19 @@ function Download() {
           </div>
           <div style={{display: 'flex', gap: 20}}>
             <Bullet i={'3'}/>
-            <pre style={{color: 'rgb(0,255,255)'}}>run the app on your iPhone</pre>
+            <pre style={{color: 'rgb(0,255,255)'}}>run the app on your iPhone or iPad</pre>
           </div>
           <div style={{display: 'flex', gap: 20}}>
             <Bullet i={'4'}/>
-            <pre style={{color: 'rgb(0,255,255)'}}>analyze hands!</pre>
+            <pre style={{color: 'rgb(0,255,255)'}}>analyze hands</pre>
           </div>
         </div>
-      </motion.div>
+      </div>
+    </motion.div>
     )
   }
 }
 
-//<img src="/xcode.png" alt="Xcode Icon" width="128" height="128">
+
 
 export default Download
