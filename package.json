@@ -23,12 +23,6 @@
     "start": "serve -s build",
     "clean": "rm -rf build && rm -rf node_modules && yarn install && yarn build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
