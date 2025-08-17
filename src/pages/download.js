@@ -51,7 +51,7 @@ function Download() {
       transition={{ delay: 1.2, duration: 2.0 }}
     >
       <div style={{ position: 'absolute', top: 20, left: 20 }}>
-        <BackButton />
+        <BackButton/>
       </div>
       <div
         style={{
